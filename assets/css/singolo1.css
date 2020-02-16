@@ -52,11 +52,13 @@ header > div {
 }
 .navbar {
   font-size: 12px;
+  
 }
 
 .navbar > span:before {
   content: "\00a0\00a0\00a0\00a0\00a0\00a0·\00a0\00a0\00a0\00a0\00a0\00a0";
   color: var(--menu-separator);
+  letter-spacing: -0.4px;
 }
 
 .navbar > span:first-child:before {
