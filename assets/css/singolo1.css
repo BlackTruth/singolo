@@ -68,7 +68,6 @@ header > div {
 .navbar > span:hover {
   color: var(--phone-section);
   cursor: pointer;
-
 }
 
 .asterisk-color {
@@ -84,4 +83,67 @@ header > div {
   height: 496px;
   background-color: var(--text-background);
   border-bottom: 6px solid var(--white);
+}
+
+.main-text {
+  padding: 67px 40px 0 40px;
+}
+
+.main-header {
+  font-family: "LatoBlack", "Times New Roman", sans-serif;
+  font-size: 31px;
+  line-height: 0.62;
+  text-align: justify;
+  color: var(--main-text-header);
+  letter-spacing: -0.6px;
+}
+
+.main-body {
+  padding-top: 28px;
+  font-family: "LatoLight", "Times New Roman", sans-serif;
+  font-size: 18px;
+  line-height: 1.67;
+  text-align: justify;
+  color: var(--main-text);
+}
+
+.sub-articles {
+  padding: 45px 40px 0 40px;
+}
+
+.sub-article {
+  display: flex;
+  flex-direction: row;
+  width: calc(33.3% - 13px);
+}
+
+.sub-article-text {
+  margin-left: 20px;
+  
+}
+
+.sub-article-header {
+  margin-top: -2px;
+  margin-bottom: 10px;
+  font-family: "LatoBlack", "Times New Roman", sans-serif;
+  font-size: 19px;
+  line-height: 1;
+  text-align: justify;
+  color: var(--main-text-header);
+  letter-spacing: -0.7px;
+}
+
+.sub-article-body {
+  font-family: "Lato", "Times New Roman", sans-serif;
+  font-size: 12px;
+  line-height: 1.8;
+  text-align: justify;
+  color: var(--main-text);
+}
+
+.sub-articles-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 33px;
 }
