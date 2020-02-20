@@ -50,6 +50,11 @@ header > div {
   display: flex;
   letter-spacing: -0.5px;
 }
+
+.logo:hover{
+  cursor: default;
+}
+
 .navbar {
   font-size: 12px;
   letter-spacing: -0.18px;
@@ -65,6 +70,13 @@ header > div {
   content: "";
 }
 
+.navbar > span:first-child {
+  color: var(--phone-section);
+}
+
+.navbar > span:first-child:hover {
+  color: var(--white);
+}
 .navbar > span:hover {
   color: var(--phone-section);
   cursor: pointer;
@@ -75,10 +87,23 @@ header > div {
 }
 
 .section-phones {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   height: 594px;
   background-color: var(--phone-section);
   border-bottom: 6px solid var(--phone-section-border);
 }
+
+.phones {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -1px;
+}
+
 .section-text {
   height: 496px;
   background-color: var(--text-background);
@@ -119,7 +144,6 @@ header > div {
 
 .sub-article-text {
   margin-left: 20px;
-  
 }
 
 .sub-article-header {
@@ -146,4 +170,47 @@ header > div {
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 33px;
+}
+
+.arrow-right {
+  transform: rotate(180deg);
+}
+
+.vertical-phone {
+  margin-right: 73px;
+}
+
+.horizontal-phone {
+  margin-top: -1px;
+}
+
+.arrow {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  width: 58px;
+  height: 100%;
+}
+
+.arrow:first-child {
+  justify-content: flex-end;
+}
+.arrow > div {
+  margin-top: -2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: absolute;
+  z-index: 1;
+}
+.arrow > div:hover > .circle {
+  height: 35px;
+  width: 35px;
+  background-color: rgba(253, 253, 253, 0.5);
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  z-index: -1;
 }
