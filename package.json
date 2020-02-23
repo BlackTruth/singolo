@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "htmlhint": "^0.11.0",
+    "stylelint": "^13.2.0",
+    "stylelint-config-htmlacademy": "^0.1.4",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-order": "^4.0.0"
+  }
+}
