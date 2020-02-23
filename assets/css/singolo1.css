@@ -29,7 +29,6 @@ html {
 
 header {
   display: flex;
-  align-items: center;
   padding: 0 40px 0 40px;
   height: 89px;
   background-color: var(--header-section);
@@ -39,10 +38,12 @@ header {
   text-transform: uppercase;
 }
 header > div {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
   width: 100%;
+  height: 100%;
+}
+
+.logo-wrapper {
+  margin-top: 28px;
 }
 
 .logo {
@@ -51,19 +52,31 @@ header > div {
   letter-spacing: -0.5px;
 }
 
-.logo:hover{
+.logo > h1:after {
+  content: "*";
+  color: var(--phone-section);
+}
+
+.logo:hover {
   cursor: default;
 }
 
 .navbar {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 12px;
   font-size: 12px;
-  letter-spacing: -0.18px;
 }
-
+.navbar-wrapper {
+  margin-top: 29px;
+}
+.navbar > span {
+  letter-spacing: -0.25px;
+}
 .navbar > span:before {
   content: "\00a0\00a0\00a0\00a0\00a0\00a0·\00a0\00a0\00a0\00a0\00a0\00a0";
   color: var(--menu-separator);
-  letter-spacing: -0.26px;
+  letter-spacing: -0.04px;
 }
 
 .navbar > span:first-child:before {
