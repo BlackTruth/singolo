@@ -25,6 +25,7 @@ html {
   --main-text: #767e9e;
   --arrow: #ca4549;
   --phone-button-border: #bababa;
+  --pinkish-grey: #c5c5c5;
 }
 
 header {
@@ -123,7 +124,7 @@ header > div {
 }
 
 .section-text {
-  padding-bottom: 67px;
+  padding: 67px 40px 67px 40px;
 }
 
 .theme-light {
@@ -137,7 +138,6 @@ header > div {
 }
 
 .main-text {
-  padding: 67px 40px 0 40px;
 }
 
 .main-header {
@@ -147,6 +147,10 @@ header > div {
   font-family: "LatoBlack", "Times New Roman", sans-serif;
   text-align: justify;
   color: var(--main-text-header);
+}
+
+.main-text:hover {
+  cursor: default;
 }
 
 .main-body {
@@ -159,7 +163,11 @@ header > div {
 }
 
 .sub-articles {
-  padding: 45px 40px 0 40px;
+  padding: 45px 0 0 0;
+}
+
+.sub-articles:hover {
+  cursor: default;
 }
 
 .sub-article {
@@ -260,6 +268,13 @@ header > div {
   margin: 15px 0 19px 0;
 }
 
+.portfolio-button:hover,
+.portfolio-button:first-child {
+  cursor: pointer;
+  color: var(--pinkish-grey);
+  border-color: var(--pinkish-grey);
+}
+
 .portfolio-images {
   display: grid;
   gap: 20px;
@@ -321,20 +336,63 @@ header > div {
   background-image: url("../images/portfolio-images/pic12.png");
 }
 
+.portfolio-image:nth-child(12) + * {
+  display: none;
+}
+
 .sub-articles-grid {
   display: grid;
   gap: 20px;
-  grid-template: 1fr / 1fr 1fr 1fr;
+  grid-template: 1fr / repeat(3, 1fr);
 }
 
 .about-us-item > img {
   margin-bottom: 19px;
 }
 
-.icons-sotial {
+.icons-social {
   margin-top: 28px;
 }
 
-.icons-sotial * {
+.icons-social * {
+  display: inline-block;
+  height: 32px;
+  width: 32px;
   margin-right: 8px;
+}
+
+.icons-social *:hover {
+  cursor: pointer;
+}
+
+.icons-social :first-child{
+  background-image: url(../images/about-us-images/facebook.png);
+}
+
+.icons-social :first-child:hover{
+  background-image: url(../images/about-us-images/Facebook-hover.png);
+}
+
+.icons-social :nth-child(2){
+  background-image: url(../images/about-us-images/google.png);
+}
+
+.icons-social :nth-child(2):hover{
+  background-image: url(../images/about-us-images/Google-hover.png);
+}
+
+.icons-social :nth-child(3){
+  background-image: url(../images/about-us-images/twitter.png);
+}
+
+.icons-social :nth-child(3):hover{
+  background-image: url(../images/about-us-images/Twitter-hover.png);
+}
+
+.icons-social :nth-child(4){
+  background-image: url(../images/about-us-images/linkedin.png);
+}
+
+.icons-social :nth-child(4):hover{
+  background-image: url(../images/about-us-images/LinkedIn-hover.png);
 }
