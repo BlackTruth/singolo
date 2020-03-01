@@ -137,9 +137,6 @@ header > div {
   border-bottom: 6px solid var(--header-section-border);
 }
 
-.main-text {
-}
-
 .main-header {
   font-size: 31px;
   line-height: 0.62;
@@ -252,21 +249,21 @@ header > div {
 }
 
 .portfolio-button {
-  border: solid 1px var(--main-text-header);
-  font-family: Lato;
+  margin-right: 10px;
+  padding: 0 6px 3px 6px;
   font-size: 12px;
+  font-family: "Lato", "Times New Roman", sans-serif;
   text-align: justify;
   color: var(--main-text);
-  padding: 0px 6px 3px 6px;
+  border: solid 1px var(--main-text-header);
   border-radius: 5px;
-  margin-right: 10px;
 }
 
-.main-text.portfolio{
+.main-text.portfolio {
   margin-top: 2px;
 }
 
-.main-body.portfolio{
+.main-body.portfolio {
   padding-top: 26px;
 }
 
@@ -274,19 +271,19 @@ header > div {
   margin: 1px 0 0 -1px;
 }
 
-.main-body.about-us{
+.main-body.about-us {
   margin-top: -2px;
 }
 
-.sub-article-header.about-us{
+.sub-article-header.about-us {
   margin-left: -1px;
 }
 
-.portfolio-button:last-child{
+.portfolio-button:last-child {
   padding-right: 5px;
 }
 
-.portfolio-button>div{
+.portfolio-button > div {
   margin-top: 2px;
 }
 
@@ -298,22 +295,22 @@ header > div {
 
 .portfolio-button:hover,
 .portfolio-button:first-child {
-  cursor: pointer;
   color: var(--pinkish-grey);
   border-color: var(--pinkish-grey);
+  cursor: pointer;
 }
 
 .portfolio-images {
   display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 }
 
 .portfolio-image {
-  height: 187px;
   display: flex;
   flex-grow: 1;
+  height: 187px;
 }
 
 .portfolio-image:first-child {
@@ -370,8 +367,8 @@ header > div {
 
 .sub-articles-grid {
   display: grid;
-  gap: 20px;
   grid-template: 1fr / repeat(3, 1fr);
+  gap: 20px;
 }
 
 .about-us-item > img {
@@ -385,8 +382,8 @@ header > div {
 
 .icons-social * {
   display: inline-block;
-  height: 32px;
   width: 32px;
+  height: 32px;
   margin-right: 4px;
 }
 
@@ -394,34 +391,34 @@ header > div {
   cursor: pointer;
 }
 
-.icons-social :first-child{
-  background-image: url(../images/about-us-images/facebook.png);
+.icons-social :first-child {
+  background-image: url("../images/about-us-images/facebook.png");
 }
 
-.icons-social :first-child:hover{
-  background-image: url(../images/about-us-images/Facebook-hover.png);
+.icons-social :first-child:hover {
+  background-image: url("../images/about-us-images/Facebook-hover.png");
 }
 
-.icons-social :nth-child(2){
-  background-image: url(../images/about-us-images/google.png);
+.icons-social :nth-child(2) {
+  background-image: url("../images/about-us-images/google.png");
 }
 
-.icons-social :nth-child(2):hover{
-  background-image: url(../images/about-us-images/Google-hover.png);
+.icons-social :nth-child(2):hover {
+  background-image: url("../images/about-us-images/Google-hover.png");
 }
 
-.icons-social :nth-child(3){
-  background-image: url(../images/about-us-images/twitter.png);
+.icons-social :nth-child(3) {
+  background-image: url("../images/about-us-images/twitter.png");
 }
 
-.icons-social :nth-child(3):hover{
-  background-image: url(../images/about-us-images/Twitter-hover.png);
+.icons-social :nth-child(3):hover {
+  background-image: url("../images/about-us-images/Twitter-hover.png");
 }
 
-.icons-social :nth-child(4){
-  background-image: url(../images/about-us-images/linkedin.png);
+.icons-social :nth-child(4) {
+  background-image: url("../images/about-us-images/linkedin.png");
 }
 
-.icons-social :nth-child(4):hover{
-  background-image: url(../images/about-us-images/LinkedIn-hover.png);
+.icons-social :nth-child(4):hover {
+  background-image: url("../images/about-us-images/LinkedIn-hover.png");
 }
