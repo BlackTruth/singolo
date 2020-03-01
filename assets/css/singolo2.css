@@ -257,15 +257,43 @@ header > div {
   font-size: 12px;
   text-align: justify;
   color: var(--main-text);
-  padding: 6px;
+  padding: 0px 6px 3px 6px;
   border-radius: 5px;
   margin-right: 10px;
+}
+
+.main-text.portfolio{
+  margin-top: 2px;
+}
+
+.main-body.portfolio{
+  padding-top: 26px;
+}
+
+.main-header.about-us {
+  margin: 1px 0 0 -1px;
+}
+
+.main-body.about-us{
+  margin-top: -2px;
+}
+
+.sub-article-header.about-us{
+  margin-left: -1px;
+}
+
+.portfolio-button:last-child{
+  padding-right: 5px;
+}
+
+.portfolio-button>div{
+  margin-top: 2px;
 }
 
 .portfolio-buttons {
   display: flex;
   flex-direction: row;
-  margin: 15px 0 19px 0;
+  margin: 11px 0 19px 1px;
 }
 
 .portfolio-button:hover,
@@ -283,9 +311,9 @@ header > div {
 }
 
 .portfolio-image {
+  height: 187px;
   display: flex;
   flex-grow: 1;
-  height: 200px;
 }
 
 .portfolio-image:first-child {
@@ -347,18 +375,19 @@ header > div {
 }
 
 .about-us-item > img {
-  margin-bottom: 19px;
+  margin-bottom: 14px;
 }
 
 .icons-social {
-  margin-top: 28px;
+  margin-top: 24px;
+  margin-left: 1px;
 }
 
 .icons-social * {
   display: inline-block;
   height: 32px;
   width: 32px;
-  margin-right: 8px;
+  margin-right: 4px;
 }
 
 .icons-social *:hover {
