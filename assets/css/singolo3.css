@@ -462,18 +462,18 @@ header > div {
 .feedback input,
 .feedback textarea {
   margin-bottom: 16px;
-  border: 0;
-  background-color: var(--pale-red);
-  color: var(--faded-pink);
-  border-radius: 5px;
-  padding-left: 15px;
   padding-right: 15px;
+  padding-left: 15px;
+  color: var(--faded-pink);
+  background-color: var(--pale-red);
+  border: 0;
+  border-radius: 5px;
 }
 
 .feedback input[type="submit"] {
+  margin-bottom: 0;
   background-color: var(--menu-separator);
   cursor: pointer;
-  margin-bottom: 0;
 }
 
 .feedback input[type="submit"]:hover {
@@ -485,10 +485,10 @@ header > div {
 }
 
 .feedback textarea {
-  resize: none;
-  line-height: 22px;
   padding-top: 7px;
   padding-bottom: 19px;
+  line-height: 22px;
+  resize: none;
 }
 
 .feedback input::placeholder,
@@ -509,11 +509,11 @@ header > div {
 .contacts {
   margin-top: 20px;
   margin-left: 1px;
-  color: var(--faded-pink);
   font-size: 12px;
+  line-height: 22px;
   font-family: "Lato", "Times New Roman", sans-serif;
   text-align: justify;
-  line-height: 22px;
+  color: var(--faded-pink);
 }
 
 .contacts div {
@@ -543,12 +543,12 @@ header > div {
 footer {
   display: flex;
   justify-content: space-between;
-  background-color: var(--header-section);
-  color: var(--main-text-header);
-  padding: 21px 40px;
   align-items: center;
+  padding: 21px 40px;
   font-size: 12px;
   font-family: "Lato", "Times New Roman", sans-serif;
+  color: var(--main-text-header);
+  background-color: var(--header-section);
 }
 
 footer .icons-social {
@@ -557,8 +557,8 @@ footer .icons-social {
 }
 
 .contacts a {
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
 }
 
 .main-header.get-a-quote {
