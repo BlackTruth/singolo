@@ -496,6 +496,12 @@ header > div {
   flex-wrap: wrap;
 }
 
+@-moz-document url-prefix() { 
+  .feedback {
+    height: calc(38px * 3 + 16px * 3 + 219px);
+  }
+}
+
 .feedback input {
   height: 38px;
   margin-bottom: 16px;
