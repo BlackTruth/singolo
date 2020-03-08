@@ -1,8 +1,3 @@
-html {
-  color: #000;
-  background: #fff;
-}
-
 body,
 div,
 dl,
@@ -75,8 +70,8 @@ h6 {
   font-weight: normal;
 }
 
-q:before,
-q:after {
+q::before,
+q::after {
   content: "";
 }
 
@@ -89,6 +84,7 @@ acronym {
 sup {
   vertical-align: text-top;
 }
+
 sub {
   vertical-align: text-bottom;
 }
@@ -96,28 +92,27 @@ sub {
 input,
 textarea,
 select {
-  font-family: inherit;
   font-size: inherit;
+  font-family: inherit;
   font-weight: inherit;
-  *font-size: 100%;
 }
 
 legend {
-  color: #000;
-}
-
-#yui3-css-stamp.cssreset {
-  display: none;
+  color: #000000;
 }
 
 html {
   max-width: 1020px;
   margin: 0 auto;
+  color: #000000;
+  background: #ffffff;
 }
 
 .wrapper {
   width: 100%;
   max-width: 1020px;
+  margin: 0;
+  padding: 0;
   background-color: antiquewhite;
 }
 
@@ -593,8 +588,6 @@ header > div {
 
 .contact {
   position: relative;
-  /* display: flex;
-  justify-content: space-between; */
   margin-top: 44px;
 }
 
