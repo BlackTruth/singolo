@@ -441,7 +441,7 @@ header > div {
 .contact {
   display: flex;
   justify-content: space-between;
-  margin-top: 48px;
+  margin-top: 44px;
 }
 
 .feedback {
@@ -473,6 +473,7 @@ header > div {
 .feedback input[type="submit"] {
   background-color: var(--menu-separator);
   cursor: pointer;
+  margin-bottom: 0;
 }
 
 .feedback input[type="submit"]:hover {
@@ -486,8 +487,8 @@ header > div {
 .feedback textarea {
   resize: none;
   line-height: 22px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 7px;
+  padding-bottom: 19px;
 }
 
 .feedback input::placeholder,
@@ -506,7 +507,8 @@ header > div {
 }
 
 .contacts {
-  margin-top: 38px;
+  margin-top: 20px;
+  margin-left: 1px;
   color: var(--faded-pink);
   font-size: 12px;
   font-family: "Lato", "Times New Roman", sans-serif;
@@ -522,12 +524,16 @@ header > div {
 
 .contacts-img {
   width: 13px;
-  padding-right: 13px;
+  padding-right: 10px;
 }
 
 .contacts-img img {
   height: 11px;
   margin: 0 auto;
+}
+
+.contacts div:first-child .contacts-img {
+  margin-top: 1px;
 }
 
 .mail-img img {
@@ -539,7 +545,7 @@ footer {
   justify-content: space-between;
   background-color: var(--header-section);
   color: var(--main-text-header);
-  padding: 22px 40px;
+  padding: 21px 40px;
   align-items: center;
   font-size: 12px;
   font-family: "Lato", "Times New Roman", sans-serif;
@@ -547,9 +553,30 @@ footer {
 
 footer .icons-social {
   margin-top: 0;
+  margin-right: -4px;
 }
 
 .contacts a {
   text-decoration: none;
   color: inherit;
+}
+
+.main-header.get-a-quote {
+  margin-top: 1px;
+}
+
+.main-body.get-a-quote {
+  margin-top: -2px;
+}
+
+.sub-article-header.get-a-quote {
+  margin-top: -1px;
+}
+
+.sub-article-body.get-a-quote {
+  line-height: 1.9;
+}
+
+.icons-social.get-a-quote * {
+  margin-right: 5px;
 }
