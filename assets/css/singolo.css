@@ -53,6 +53,9 @@ header > div {
 
 .logo {
   display: flex;
+}
+
+.logo h1 {
   font-size: 25px;
   letter-spacing: -0.5px;
 }
