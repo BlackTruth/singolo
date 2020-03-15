@@ -201,16 +201,12 @@ header > div {
   content: "";
 }
 
-.navbar > span:first-child {
+.navbar > span.active {
   color: var(--phone-section);
-}
-
-.navbar > span:first-child:hover {
-  color: var(--white);
 }
 
 .navbar > span:hover {
-  color: var(--phone-section);
+  color: var(--rose-pink);
   cursor: pointer;
 }
 
