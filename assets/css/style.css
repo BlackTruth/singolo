@@ -443,9 +443,10 @@ header > div {
 }
 
 .portfolio-buttons {
+  padding: 0 5px;
   display: flex;
   flex-direction: row;
-  margin: 11px 0 19px 1px;
+  margin: 11px 0 16px 1px;
 }
 
 .portfolio-button.active {
@@ -459,17 +460,33 @@ header > div {
   cursor: pointer;
 }
 
+.section-text.portfolio{
+  padding: 67px 35px 62px 35px;
+}
+
+.main-text.portfolio {
+  padding: 0 5px;
+}
+
 .portfolio-images {
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: 10px;
 }
 
 .portfolio-image {
+  border: 5px solid var(--header-section);
+  box-sizing: border-box;
+  background-repeat: no-repeat;
   display: flex;
   flex-grow: 1;
-  height: 187px;
+  height: 197px;
+  width: 230px;
+}
+
+.portfolio-image.bordered{
+  border: 5px solid var(--phone-section);
 }
 
 .portfolio-image:first-child {

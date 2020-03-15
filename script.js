@@ -35,3 +35,10 @@ document
         elem.style.order = ( index + counter ) % 12;
       });
   });
+
+  portfolioImages.addEventListener("click", function(event) {
+    portfolioImages
+      .querySelectorAll(".portfolio-image")
+      .forEach(elem => elem.classList.remove("bordered"));
+    event.target.classList.add("bordered");
+  });
