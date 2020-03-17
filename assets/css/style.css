@@ -360,6 +360,10 @@ header > div {
   margin-left: 1px;
 }
 
+.off-phone {
+  display: none;
+}
+
 .arrow {
   position: relative;
   display: flex;

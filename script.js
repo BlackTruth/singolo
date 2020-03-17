@@ -79,3 +79,37 @@ sendLetter.addEventListener("click", function(event) {
   event.preventDefault();
   showAlert(subject.value, description.value);
 });
+
+let vCanvas = document.createElement("canvas");
+let img = vPhone.querySelector("img");
+vCanvas.width = img.width;
+vCanvas.height = img.height;
+vCanvas.getContext("2d").drawImage(img, 0, 0, img.width, img.height);
+
+let hCanvas = document.createElement("canvas");
+img = hPhone.querySelector("img");
+hCanvas.width = img.width;
+hCanvas.height = img.height;
+hCanvas.getContext("2d").drawImage(img, 0, 0, img.width, img.height);
+
+vPhone.addEventListener("click", function(event) {
+  if (event.target.tagName == "IMG") {
+    let pixelData = vCanvas
+      .getContext("2d")
+      .getImageData(event.offsetX, event.offsetY, 1, 1).data;
+    if (pixelData[3] == 0) return;
+    vPhone.querySelector("img.off-phone").classList.remove("off-phone");
+    event.target.classList.add("off-phone");
+  }
+});
+
+hPhone.addEventListener("click", function(event) {
+  if (event.target.tagName == "IMG") {
+    let pixelData = hCanvas
+      .getContext("2d")
+      .getImageData(event.offsetX, event.offsetY, 1, 1).data;
+    if (pixelData[3] == 0) return;
+    hPhone.querySelector("img.off-phone").classList.remove("off-phone");
+    event.target.classList.add("off-phone");
+  }
+});

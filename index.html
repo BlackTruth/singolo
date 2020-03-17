@@ -35,11 +35,21 @@
           </div>
         </div>
         <div class="phones">
-          <div class="vertical-phone">
+          <div id="vPhone" class="vertical-phone">
             <img src="assets/images/iPhone-v.png" alt="vertical-phone" />
+            <img
+              class="off-phone"
+              src="assets/images/iPhone-v-off.png"
+              alt="vertical-phone-off"
+            />
           </div>
-          <div class="horizontal-phone">
+          <div id="hPhone" class="horizontal-phone">
             <img src="assets/images/iPhone-h.png" alt="horizontal-phone" />
+            <img
+              class="off-phone"
+              src="assets/images/iPhone-h-off.png"
+              alt="horizontal-phone-off"
+            />
           </div>
         </div>
         <div class="arrow">
@@ -255,8 +265,15 @@
           <form class="feedback" action="singolo.html">
             <input type="text" placeholder="Name (Required)" required />
             <input type="email" placeholder="Email (Required)" required />
-            <input id="subject" type="text"  maxlength="90" placeholder="Subject" />
-            <textarea id="description"  maxlength="600"
+            <input
+              id="subject"
+              type="text"
+              maxlength="90"
+              placeholder="Subject"
+            />
+            <textarea
+              id="description"
+              maxlength="600"
               placeholder="Describe your project in detail..."
               rows="8"
             ></textarea>
