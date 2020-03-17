@@ -80,20 +80,14 @@ sendLetter.addEventListener("click", function(event) {
   showAlert(subject.value, description.value);
 });
 
-let vCanvas = document.createElement("canvas");
-let img = vPhone.querySelector("img");
-vCanvas.width = img.width;
-vCanvas.height = img.height;
-vCanvas.getContext("2d").drawImage(img, 0, 0, img.width, img.height);
-
-let hCanvas = document.createElement("canvas");
-img = hPhone.querySelector("img");
-hCanvas.width = img.width;
-hCanvas.height = img.height;
-hCanvas.getContext("2d").drawImage(img, 0, 0, img.width, img.height);
 
 vPhone.addEventListener("click", function(event) {
   if (event.target.tagName == "IMG") {
+    let vCanvas = document.createElement("canvas");
+    let img = vPhone.querySelector("img");
+    vCanvas.width = img.width;
+    vCanvas.height = img.height;
+    vCanvas.getContext("2d").drawImage(img, 0, 0, img.width, img.height);
     let pixelData = vCanvas
       .getContext("2d")
       .getImageData(event.offsetX, event.offsetY, 1, 1).data;
@@ -105,6 +99,11 @@ vPhone.addEventListener("click", function(event) {
 
 hPhone.addEventListener("click", function(event) {
   if (event.target.tagName == "IMG") {
+    let hCanvas = document.createElement("canvas");
+    img = hPhone.querySelector("img");
+    hCanvas.width = img.width;
+    hCanvas.height = img.height;
+    hCanvas.getContext("2d").drawImage(img, 0, 0, img.width, img.height);
     let pixelData = hCanvas
       .getContext("2d")
       .getImageData(event.offsetX, event.offsetY, 1, 1).data;
@@ -113,3 +112,19 @@ hPhone.addEventListener("click", function(event) {
     event.target.classList.add("off-phone");
   }
 });
+
+const changeSlide = function(event) {
+  let needElem = slider.querySelector(".off-phone");
+  if (needElem == slide1) {
+    slide1.classList.remove("off-phone");
+    slide2.classList.add("off-phone");
+    slider.classList.remove('second-slide');
+  } else {
+    slider.classList.add('second-slide');
+    slide2.classList.remove("off-phone");
+    slide1.classList.add("off-phone");
+  }
+};
+
+arrowRight.addEventListener("click", changeSlide);
+arrowLeft.addEventListener("click", changeSlide);

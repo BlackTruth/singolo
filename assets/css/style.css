@@ -364,6 +364,14 @@ header > div {
   display: none;
 }
 
+#slider.second-slide{
+  border-color: lightblue;
+}
+
+#slide2.second-slide {
+  margin: -54px -40px -54px -40px;
+}
+
 .arrow {
   position: relative;
   display: flex;
