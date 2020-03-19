@@ -4,8 +4,40 @@ document.querySelector("#navbar").addEventListener("click", function(event) {
     .forEach(elem => elem.classList.remove("active"));
   event.target.classList.add("active");
   location.href = event.target.querySelector("a").href;
-  console.log(location);
+  // var a = event.target.querySelector("a");
+  // var href = a.href.substring(a.href.indexOf('#')+1);
+  // href = document.querySelector(`a[name='${href}']`);
+  // scrollIt(href, 0.003, 'easeInQuad');
+  // console.log(getCoords(href));
+  // var  offsetTop = getCoords(href).top-95+1;
+  // document.querySelector("html").animate(
+  //   [{ scrollTop: offsetTop}], 
+  //   {diration: 850} );
+  // event.preventDefault();
 });
+
+// Bind to scroll
+// $(window).scroll(function(){
+//   // Get container scroll position
+//   var fromTop = $(this).scrollTop()+topMenuHeight;
+  
+//   // Get id of current scroll item
+//   var cur = scrollItems.map(function(){
+//     if ($(this).offset().top < fromTop)
+//       return this;
+//   });
+//   // Get the id of the current element
+//   cur = cur[cur.length-1];
+//   var id = cur && cur.length ? cur[0].id : "";
+  
+//   if (lastId !== id) {
+//       lastId = id;
+//       // Set/remove active class
+//       menuItems
+//         .parent().removeClass("active")
+//         .end().filter("[href=#"+id+"]").parent().addClass("active");
+//   }                   
+// });
 
 document
   .querySelector("#portfolio-buttons")
@@ -60,25 +92,28 @@ function showAlert(subject, description) {
   message.appendChild(field);
   field = document.createElement("p");
   if (subject) field.innerText = "Subject: " + subject;
-  else field.innerText = "Without subject";
+  else field.innerText = "No subject";
   message.appendChild(field);
   field = document.createElement("p");
   if (description) field.innerText = "Description: " + description;
-  else field.innerText = "Without description";
+  else field.innerText = "No description";
   message.appendChild(field);
   let button = document.createElement("input");
   button.type = "button";
   button.value = "Ok";
   button.addEventListener("click", function() {
     wrapper.remove();
+    document.querySelector(".feedback").reset();
   });
   message.appendChild(button);
   body.appendChild(fragment);
 }
 
 sendLetter.addEventListener("click", function(event) {
-  event.preventDefault();
-  showAlert(subject.value, description.value);
+  if(document.querySelector(".feedback").reportValidity()){
+    event.preventDefault();
+    showAlert(subject.value, description.value);
+  }
 });
 
 vPhone.addEventListener("click", function(event) {

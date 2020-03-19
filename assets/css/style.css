@@ -192,6 +192,7 @@ header > div {
 }
 
 .navbar > span {
+  transition:all 0.3s ease-in-out;
   letter-spacing: -0.25px;
 }
 
@@ -480,6 +481,7 @@ header > div {
   color: var(--main-text);
   border: solid 1px var(--main-text-header);
   border-radius: 5px;
+  transition:all 0.3s ease-in-out;
 }
 
 .main-text.portfolio {
@@ -551,6 +553,7 @@ header > div {
   flex-grow: 1;
   height: 197px;
   width: 230px;
+  cursor: pointer;
 }
 
 .portfolio-image.bordered {
