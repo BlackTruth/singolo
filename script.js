@@ -80,7 +80,6 @@ sendLetter.addEventListener("click", function(event) {
   showAlert(subject.value, description.value);
 });
 
-
 vPhone.addEventListener("click", function(event) {
   if (event.target.tagName == "IMG") {
     let vCanvas = document.createElement("canvas");
@@ -113,18 +112,32 @@ hPhone.addEventListener("click", function(event) {
   }
 });
 
-const changeSlide = function(event) {
-  let needElem = slider.querySelector(".off-phone");
+const changeSlide = function() {
+  let needElem = carusel.querySelector(".off-elem");
   if (needElem == slide1) {
-    slide1.classList.remove("off-phone");
-    slide2.classList.add("off-phone");
-    slider.classList.remove('second-slide');
+    slide1.classList.remove("off-elem");
+    slide2.classList.add("off-elem");
   } else {
-    slider.classList.add('second-slide');
-    slide2.classList.remove("off-phone");
-    slide1.classList.add("off-phone");
+    slide2.classList.remove("off-elem");
+    slide1.classList.add("off-elem");
   }
 };
 
-arrowRight.addEventListener("click", changeSlide);
-arrowLeft.addEventListener("click", changeSlide);
+function animateCaruselLeft(event) {
+  carusel.classList.add("left-animation");
+}
+
+function animateCaruselRight(event) {
+  carusel.classList.add("right-animation");
+  changeSlide();
+}
+
+function endAnimation(event) {
+  if (carusel.classList.contains("left-animation")) changeSlide();
+  carusel.classList.remove("left-animation");
+  carusel.classList.remove("right-animation");
+}
+
+arrowRight.addEventListener("click", animateCaruselRight);
+arrowLeft.addEventListener("click", animateCaruselLeft);
+carusel.addEventListener("animationend", endAnimation);
