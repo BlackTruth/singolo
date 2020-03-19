@@ -106,6 +106,7 @@ html {
   margin: 0 auto;
   color: #000000;
   background: #ffffff;
+  scroll-behavior: smooth;
 }
 
 .wrapper {
@@ -147,6 +148,9 @@ header {
   background-color: var(--header-section);
   border-bottom: 6px solid var(--header-section-border);
   text-transform: uppercase;
+  position: sticky;
+  z-index: 100;
+  top: 0;
 }
 
 header > div {
@@ -385,7 +389,6 @@ header > div {
   order: 2;
 }
 
-
 .left-animation {
   animation-name: ride-left;
   animation-duration: 1s;
@@ -396,7 +399,7 @@ header > div {
   animation-duration: 1s;
 }
 
-@keyframes ride-left{
+@keyframes ride-left {
   from {
     left: 0;
   }
@@ -405,7 +408,7 @@ header > div {
   }
 }
 
-@keyframes ride-right{
+@keyframes ride-right {
   from {
     left: -100%;
   }
@@ -872,4 +875,9 @@ footer .icons-social {
 .alert-message p:nth-child(3) {
   overflow: hidden;
   line-height: 1;
+}
+
+main > a {
+  position: relative;
+  top: -95px;
 }

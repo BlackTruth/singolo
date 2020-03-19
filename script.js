@@ -4,6 +4,7 @@ document.querySelector("#navbar").addEventListener("click", function(event) {
     .forEach(elem => elem.classList.remove("active"));
   event.target.classList.add("active");
   location.href = event.target.querySelector("a").href;
+  console.log(location);
 });
 
 document
