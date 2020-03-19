@@ -112,6 +112,10 @@ hPhone.addEventListener("click", function(event) {
   }
 });
 
+const sliderVars = {
+  inAnimation : false
+}
+
 const changeSlide = function() {
   let needElem = carusel.querySelector(".off-elem");
   if (needElem == slide1) {
@@ -124,10 +128,16 @@ const changeSlide = function() {
 };
 
 function animateCaruselLeft(event) {
+  if(sliderVars.inAnimation)
+    return;
+  sliderVars.inAnimation = true;
   carusel.classList.add("left-animation");
 }
 
 function animateCaruselRight(event) {
+  if(sliderVars.inAnimation)
+    return;
+  sliderVars.inAnimation = true;
   carusel.classList.add("right-animation");
   changeSlide();
 }
@@ -136,6 +146,7 @@ function endAnimation(event) {
   if (carusel.classList.contains("left-animation")) changeSlide();
   carusel.classList.remove("left-animation");
   carusel.classList.remove("right-animation");
+  sliderVars.inAnimation = false;
 }
 
 arrowRight.addEventListener("click", animateCaruselRight);
