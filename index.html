@@ -16,33 +16,52 @@
       </div>
 
       <div class="navbar-wrapper">
-        <div class="navbar">
-          <span>home</span>
-          <span>services</span>
-          <span>portfolio</span>
-          <span>about</span>
-          <span>contact</span>
+        <div id="navbar" class="navbar">
+          <span class="active"><a href="#home"></a>home</span>
+          <span><a href="#services"></a>services</span>
+          <span><a href="#portfolio"></a>portfolio</span>
+          <span><a href="#about"></a>about</span>
+          <span><a href="#contact"></a>contact</span>
         </div>
       </div>
     </header>
     <main>
-      <section class="section-text theme-lightred section-phones">
+      <a name="home"></a>
+      <section id="slider" class="slider-section">
         <div class="arrow">
-          <div>
+          <div id="arrowLeft">
             <img src="assets/images/arrow.png" alt="right arrow" />
             <div class="circle"></div>
           </div>
         </div>
-        <div class="phones">
-          <div class="vertical-phone">
-            <img src="assets/images/iPhone-v.png" alt="vertical-phone" />
+        <div id="carusel" class="carusel">
+          <div id="slide1" class="phones theme-lightred">
+            <div id="vPhone" class="vertical-phone">
+              <img src="assets/images/iPhone-v.png" alt="vertical-phone" />
+              <img
+                class="off-phone"
+                src="assets/images/iPhone-v-off.png"
+                alt="vertical-phone-off"
+              />
+            </div>
+            <div id="hPhone" class="horizontal-phone">
+              <img src="assets/images/iPhone-h.png" alt="horizontal-phone" />
+              <img
+                class="off-phone"
+                src="assets/images/iPhone-h-off.png"
+                alt="horizontal-phone-off"
+              />
+            </div>
           </div>
-          <div class="horizontal-phone">
-            <img src="assets/images/iPhone-h.png" alt="horizontal-phone" />
-          </div>
+          <img
+            id="slide2"
+            class="off-elem"
+            src="assets/images/second-slide.png"
+            alt="second-slide"
+          />
         </div>
         <div class="arrow">
-          <div>
+          <div id="arrowRight">
             <div class="circle"></div>
             <img
               class="arrow-right"
@@ -52,6 +71,7 @@
           </div>
         </div>
       </section>
+      <a name="services"></a>
       <div class="section-text theme-light our-services">
         <article class="main-text">
           <div class="main-header">Our Services</div>
@@ -141,6 +161,7 @@
           </div>
         </article>
       </div>
+      <a name="portfolio"></a>
       <section class="section-text theme-dark portfolio">
         <article class="main-text portfolio">
           <div class="main-header">Portfolio</div>
@@ -149,13 +170,13 @@
             eget lacinia odio sem nec elit.
           </div>
         </article>
-        <div class="portfolio-buttons">
-          <div class="portfolio-button"><div>All</div></div>
-          <div class="portfolio-button"><div>Web Design</div></div>
-          <div class="portfolio-button"><div>Graphic Design</div></div>
-          <div class="portfolio-button"><div>Artwork</div></div>
+        <div id="portfolio-buttons" class="portfolio-buttons">
+          <div class="portfolio-button active"><span>All</span></div>
+          <div class="portfolio-button"><span>Web Design</span></div>
+          <div class="portfolio-button"><span>Graphic Design</span></div>
+          <div class="portfolio-button"><span>Artwork</span></div>
         </div>
-        <div class="portfolio-images">
+        <div id="portfolioImages" class="portfolio-images">
           <div class="portfolio-image"></div>
           <div class="portfolio-image"></div>
           <div class="portfolio-image"></div>
@@ -171,6 +192,7 @@
           <div class="portfolio-image"></div>
         </div>
       </section>
+      <a name="about"></a>
       <section class="section-text theme-light about-us">
         <article class="main-text">
           <div class="main-header about-us">About Us</div>
@@ -236,6 +258,7 @@
           </div>
         </article>
       </section>
+      <a name="contact"></a>
       <section class="section-text theme-lightred">
         <article class="main-text">
           <div class="main-header get-a-quote">Get a Quote</div>
@@ -250,12 +273,19 @@
           <form class="feedback" action="singolo.html">
             <input type="text" placeholder="Name (Required)" required />
             <input type="email" placeholder="Email (Required)" required />
-            <input type="text" placeholder="Subject" />
+            <input
+              id="subject"
+              type="text"
+              maxlength="90"
+              placeholder="Subject"
+            />
             <textarea
+              id="description"
+              maxlength="600"
               placeholder="Describe your project in detail..."
               rows="8"
             ></textarea>
-            <input type="submit" value="Submit" />
+            <input id="sendLetter" type="submit" value="Submit" />
           </form>
           <div class="contact-info">
             <div class="sub-article-header get-a-quote">
@@ -315,5 +345,6 @@
         <div></div>
       </div>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
