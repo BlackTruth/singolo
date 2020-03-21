@@ -1,43 +1,52 @@
 document.querySelector("#navbar").addEventListener("click", function(event) {
-  document
-    .querySelectorAll("#navbar>span")
-    .forEach(elem => elem.classList.remove("active"));
-  event.target.classList.add("active");
+  setMenuActive(event.target);
   location.href = event.target.querySelector("a").href;
-  // var a = event.target.querySelector("a");
-  // var href = a.href.substring(a.href.indexOf('#')+1);
-  // href = document.querySelector(`a[name='${href}']`);
-  // scrollIt(href, 0.003, 'easeInQuad');
-  // console.log(getCoords(href));
-  // var  offsetTop = getCoords(href).top-95+1;
-  // document.querySelector("html").animate(
-  //   [{ scrollTop: offsetTop}], 
-  //   {diration: 850} );
-  // event.preventDefault();
 });
 
-// Bind to scroll
-// $(window).scroll(function(){
-//   // Get container scroll position
-//   var fromTop = $(this).scrollTop()+topMenuHeight;
-  
-//   // Get id of current scroll item
-//   var cur = scrollItems.map(function(){
-//     if ($(this).offset().top < fromTop)
-//       return this;
-//   });
-//   // Get the id of the current element
-//   cur = cur[cur.length-1];
-//   var id = cur && cur.length ? cur[0].id : "";
-  
-//   if (lastId !== id) {
-//       lastId = id;
-//       // Set/remove active class
-//       menuItems
-//         .parent().removeClass("active")
-//         .end().filter("[href=#"+id+"]").parent().addClass("active");
-//   }                   
-// });
+function setMenuActive(elem) {
+  const menu = document.querySelectorAll("#navbar>span");
+  menu.forEach(elem => elem.classList.remove("active"));
+  if (isNaN(elem)) elem.classList.add("active");
+  else menu[elem].classList.add("active");
+}
+
+window.addEventListener("scroll", function(event) {
+  let links = Array.prototype.slice.call(
+    document.querySelectorAll("main>a[name]")
+  );
+  var body = document.body,
+    html = document.documentElement;
+  var height = Math.max(
+    body.scrollHeight,
+    body.offsetHeight,
+    html.clientHeight,
+    html.scrollHeight,
+    html.offsetHeight
+  );
+  if (window.pageYOffset + this.innerHeight == height) {
+    setMenuActive(links.length - 1);
+    return;
+  }
+
+  links.reduce(function(prevEl, elem, index) {
+    if (
+      window.scrollY >= getTop(prevEl) &&
+      window.scrollY <= (getTop(elem) - getTop(prevEl)) / 5 + getTop(prevEl)
+    )
+      setMenuActive(index - 1);
+    return elem;
+  });
+});
+
+function getTop(elem) {
+  var box = elem.getBoundingClientRect();
+  var body = document.body;
+  var docEl = document.documentElement;
+  var scrollTop = window.pageYOffset || docEl.scrollTop || body.scrollTop;
+  var clientTop = docEl.clientTop || body.clientTop || 0;
+  var top = box.top + scrollTop - clientTop;
+  return top;
+}
 
 document
   .querySelector("#portfolio-buttons")
@@ -110,7 +119,7 @@ function showAlert(subject, description) {
 }
 
 sendLetter.addEventListener("click", function(event) {
-  if(document.querySelector(".feedback").reportValidity()){
+  if (document.querySelector(".feedback").reportValidity()) {
     event.preventDefault();
     showAlert(subject.value, description.value);
   }
@@ -149,8 +158,8 @@ hPhone.addEventListener("click", function(event) {
 });
 
 const sliderVars = {
-  inAnimation : false
-}
+  inAnimation: false
+};
 
 const changeSlide = function() {
   let needElem = carusel.querySelector(".off-elem");
@@ -164,15 +173,13 @@ const changeSlide = function() {
 };
 
 function animateCaruselLeft(event) {
-  if(sliderVars.inAnimation)
-    return;
+  if (sliderVars.inAnimation) return;
   sliderVars.inAnimation = true;
   carusel.classList.add("left-animation");
 }
 
 function animateCaruselRight(event) {
-  if(sliderVars.inAnimation)
-    return;
+  if (sliderVars.inAnimation) return;
   sliderVars.inAnimation = true;
   carusel.classList.add("right-animation");
   changeSlide();
