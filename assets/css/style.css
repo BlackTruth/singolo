@@ -192,7 +192,7 @@ header > div {
 }
 
 .navbar > span {
-  transition:all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   letter-spacing: -0.25px;
 }
 
@@ -250,9 +250,113 @@ header > div {
 .phones {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  /* margin-top: -1px; */
+}
+
+.vertical-phone {
+  width: 30.08%;
+}
+
+.horizontal-phone {
+  width: 60.65%;
+}
+
+.off-phone {
+  display: none;
+}
+
+.carusel {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+}
+
+#slide2 {
+  border-bottom: 6px solid lightblue;
+}
+
+#slide1 {
+  width: 50%;
+  padding: 0 112px 0 110px;
+}
+
+.off-elem {
+  order: 2;
+}
+
+.left-animation {
+  animation-name: ride-left;
+  animation-duration: 1s;
+}
+
+.right-animation {
+  animation-name: ride-right;
+  animation-duration: 1s;
+}
+
+@keyframes ride-left {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+@keyframes ride-right {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+.slider-section {
+  position: relative;
+  background-color: var(--phone-section);
+  overflow: hidden;
+  width: 1020px;
+}
+
+.slider-section:before {
+  display: block;
+  content: "";
+  width: 100%;
+  padding-top: 58.82%;
+}
+
+.arrow-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  /* margin-top: -1px; */
+  margin: 0 40px 0 40px;
+  width: calc(100% - 80px);
+  height: 100%;
+  box-sizing: content-box;
+}
+
+@media only screen and (max-width: 1020px) {
+  .phones .vertical-phone img,
+  .phones .horizontal-phone img {
+    width: 100%;
+    height: 100%;
+  }
+
+  #slide2 {
+    width: 50%;
+    height: 100%;
+  }
+  .slider-section {
+    width: 100%;
+  }
 }
 
 .theme-lightred,
@@ -352,76 +456,6 @@ header > div {
   margin-top: 33px;
 }
 
-.horizontal-phone {
-}
-
-.vertical-phone {
-}
-
-.off-phone {
-  display: none;
-}
-
-.carusel {
-  display: flex;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 200%;
-}
-
-#slide2 {
-  border-bottom: 6px solid lightblue;
-}
-
-#slide1 {
-  width: 50%;
-  padding: 0 112px 0 110px;
-}
-
-.off-elem {
-  order: 2;
-}
-
-.left-animation {
-  animation-name: ride-left;
-  animation-duration: 1s;
-}
-
-.right-animation {
-  animation-name: ride-right;
-  animation-duration: 1s;
-}
-
-@keyframes ride-left {
-  from {
-    left: 0;
-  }
-  to {
-    left: -100%;
-  }
-}
-
-@keyframes ride-right {
-  from {
-    left: -100%;
-  }
-  to {
-    left: 0;
-  }
-}
-
-.slider-section {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 600px;
-  background-color: var(--phone-section);
-  padding: 0 40px 0 40px;
-  overflow: hidden;
-}
-
 .arrow {
   position: relative;
   display: flex;
@@ -474,7 +508,7 @@ header > div {
   color: var(--main-text);
   border: solid 1px var(--main-text-header);
   border-radius: 5px;
-  transition:all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .main-text.portfolio {
