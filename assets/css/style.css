@@ -353,16 +353,9 @@ header > div {
 }
 
 .horizontal-phone {
-  margin-top: -2px;
-  margin-bottom: 2px;
-  margin-left: 1px;
 }
 
 .vertical-phone {
-  margin-top: -1px;
-  margin-right: 72px;
-  margin-bottom: 1px;
-  margin-left: 1px;
 }
 
 .off-phone {
@@ -383,7 +376,7 @@ header > div {
 
 #slide1 {
   width: 50%;
-  padding: 0 100px 0 100px;
+  padding: 0 112px 0 110px;
 }
 
 .off-elem {
