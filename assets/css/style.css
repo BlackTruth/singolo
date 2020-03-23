@@ -580,71 +580,44 @@ header > div {
   gap: 10px;
 }
 
+.portfolio-image:nth-child(n + 13) {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .portfolio-images{
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .portfolio-images{
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 3px;
+  }
+  .portfolio-image:nth-child(n + 9) {
+    display: none;
+  }
+}
+
 .portfolio-image {
   border: 5px solid var(--header-section);
   box-sizing: border-box;
   background-repeat: no-repeat;
   display: flex;
   flex-grow: 1;
-  height: 197px;
-  width: 230px;
+  width: 100%;
   cursor: pointer;
+}
+
+.portfolio-image img{
+  width: 100%;
 }
 
 .portfolio-image.bordered {
   border: 5px solid var(--phone-section);
-}
-
-.portfolio-image:first-child {
-  background-image: url("../images/portfolio-images/pic1.png");
-}
-
-.portfolio-image:nth-child(2) {
-  background-image: url("../images/portfolio-images/pic2.png");
-}
-
-.portfolio-image:nth-child(3) {
-  background-image: url("../images/portfolio-images/pic3.png");
-}
-
-.portfolio-image:nth-child(4) {
-  background-image: url("../images/portfolio-images/pic4.png");
-}
-
-.portfolio-image:nth-child(5) {
-  background-image: url("../images/portfolio-images/pic5.png");
-}
-
-.portfolio-image:nth-child(6) {
-  background-image: url("../images/portfolio-images/pic6.png");
-}
-
-.portfolio-image:nth-child(7) {
-  background-image: url("../images/portfolio-images/pic7.png");
-}
-
-.portfolio-image:nth-child(8) {
-  background-image: url("../images/portfolio-images/pic8.png");
-}
-
-.portfolio-image:nth-child(9) {
-  background-image: url("../images/portfolio-images/pic9.png");
-}
-
-.portfolio-image:nth-child(10) {
-  background-image: url("../images/portfolio-images/pic10.png");
-}
-
-.portfolio-image:nth-child(11) {
-  background-image: url("../images/portfolio-images/pic11.png");
-}
-
-.portfolio-image:nth-child(12) {
-  background-image: url("../images/portfolio-images/pic12.png");
-}
-
-.portfolio-image:nth-child(n + 13) {
-  display: none;
 }
 
 .sub-articles-grid {
@@ -919,3 +892,14 @@ main > a {
   position: relative;
   top: -95px;
 }
+
+
+@media only screen and (max-width: 375px) {
+  .section-text{
+    padding: 67px 30px;
+  }
+  .section-text.portfolio{
+    padding: 42px 25px 38px 25px
+  }
+}
+

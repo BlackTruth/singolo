@@ -82,7 +82,10 @@ portfolioImages.addEventListener("click", function(event) {
   portfolioImages
     .querySelectorAll(".portfolio-image")
     .forEach(elem => elem.classList.remove("bordered"));
-  event.target.classList.add("bordered");
+  let elem = event.target;
+  if(elem.tagName == 'IMG')
+    elem = elem.parentElement;
+  elem.classList.add("bordered");
 });
 
 function showAlert(subject, description) {
