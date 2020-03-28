@@ -35,17 +35,22 @@ window.addEventListener("scroll", function(event) {
     return;
   }
 
-  links.reduce(function(prevEl, elem, index) {
+  for(let index=0; index< links.length; index++){
+    let prevEl = links[index];
+    let elem = links[index+1];
     if (
-      window.scrollY >= getTop(prevEl) &&
+      window.scrollY >= getTop(prevEl) - (getTop(elem) - getTop(prevEl)) / 5 &&
       window.scrollY <= (getTop(elem) - getTop(prevEl)) / 5 + getTop(prevEl)
-    )
-      setMenuActive(index - 1);
-    return elem;
-  });
+    ){
+      setMenuActive(index);
+      return;
+    }
+  }
 });
 
 function getTop(elem) {
+  if(!elem)
+    return window.pageYOffset + window.innerHeight;
   var box = elem.getBoundingClientRect();
   var body = document.body;
   var docEl = document.documentElement;
@@ -69,6 +74,12 @@ document
       button = event.target;
     }
 
+    let cnt = 0;
+
+    portfolioImages.querySelectorAll(".portfolio-image").forEach(e => {
+      if (getComputedStyle(e, null).display != "none") cnt++;
+    });
+
     document.querySelectorAll("#portfolio-buttons>div").forEach(elem => {
       if (button != elem && !flag) {
         counter++;
@@ -81,7 +92,10 @@ document
     document
       .querySelectorAll("#portfolioImages>.portfolio-image")
       .forEach((elem, index) => {
-        elem.style.order = (index + counter) % 12;
+        elem.style.order =
+          index > cnt
+            ? 100 + ((index + counter) % cnt)
+            : (index + counter) % cnt;
       });
   });
 
@@ -214,3 +228,5 @@ function showAside() {
     aside.classList.add("active");
   }
 }
+
+closeAside.addEventListener("click", showAside);
