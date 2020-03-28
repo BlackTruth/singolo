@@ -1,13 +1,20 @@
-document.querySelector("#navbar").addEventListener("click", function(event) {
-  setMenuActive(event.target);
+function setNavbarActive(event) {
   location.href = event.target.querySelector("a").href;
-});
+  showAside();
+}
+document.querySelector("#navbar").addEventListener("click", setNavbarActive);
+document
+  .querySelector("#asideNavbar")
+  .addEventListener("click", setNavbarActive);
 
-function setMenuActive(elem) {
-  const menu = document.querySelectorAll("#navbar>span");
+function setMenuActive(index) {
+  let menu = navbar.querySelectorAll("span");
   menu.forEach(elem => elem.classList.remove("active"));
-  if (isNaN(elem)) elem.classList.add("active");
-  else menu[elem].classList.add("active");
+  menu[index].classList.add("active");
+
+  menu = asideNavbar.querySelectorAll("span");
+  menu.forEach(elem => elem.classList.remove("active"));
+  menu[index].classList.add("active");
 }
 
 window.addEventListener("scroll", function(event) {
@@ -83,8 +90,7 @@ portfolioImages.addEventListener("click", function(event) {
     .querySelectorAll(".portfolio-image")
     .forEach(elem => elem.classList.remove("bordered"));
   let elem = event.target;
-  if(elem.tagName == 'IMG')
-    elem = elem.parentElement;
+  if (elem.tagName == "IMG") elem = elem.parentElement;
   elem.classList.add("bordered");
 });
 
@@ -198,3 +204,13 @@ function endAnimation(event) {
 arrowRight.addEventListener("click", animateCaruselRight);
 arrowLeft.addEventListener("click", animateCaruselLeft);
 carusel.addEventListener("animationend", endAnimation);
+
+burgerIcon.addEventListener("click", showAside);
+asideBurgerIcon.addEventListener("click", showAside);
+
+function showAside() {
+  if (aside.classList.contains("active")) aside.classList.remove("active");
+  else {
+    aside.classList.add("active");
+  }
+}

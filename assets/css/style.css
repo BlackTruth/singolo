@@ -153,6 +153,12 @@ header {
   top: 0;
 }
 
+h1 {
+  font-family: "LatoBold", "Times New Roman", sans-serif;
+  color: var(--white);
+  text-transform: uppercase;
+}
+
 header > div {
   width: 100%;
   height: 100%;
@@ -191,18 +197,18 @@ header > div {
   margin-top: 29px;
 }
 
-.navbar > span {
+.navbar-wrapper .navbar > span {
   transition: all 0.3s ease-in-out;
   letter-spacing: -0.25px;
 }
 
-.navbar > span::before {
+.navbar-wrapper .navbar > span::before {
   letter-spacing: -0.04px;
   color: var(--menu-separator);
   content: "\00a0\00a0\00a0\00a0\00a0\00a0·\00a0\00a0\00a0\00a0\00a0\00a0";
 }
 
-.navbar > span:first-child::before {
+.navbar-wrapper .navbar > span:first-child::before {
   content: "";
 }
 
@@ -921,6 +927,15 @@ main > a {
   top: -95px;
 }
 
+.burger-icon {
+  display: none;
+}
+
+.mobile-menu{
+  display: none;
+  position: fixed;
+}
+
 @media only screen and (max-width: 375px) {
   .section-text {
     padding: 67px 30px;
@@ -928,16 +943,82 @@ main > a {
   .section-text.portfolio {
     padding: 42px 25px 38px 25px;
   }
+}
+  
+@media only screen and (max-width: 436px) {
   footer {
     justify-content: center;
   }
   footer > :first-child {
     display: none;
   }
+}
+
+@media only screen and (max-width: 550px) {
+  .mobile-menu.active{
+    display: block;
+  }
   .navbar-wrapper {
     display: none;
   }
-  header {
+  .logo-wrapper {
+    display: flex;
     justify-content: center;
+    align-items: center;
+    margin-top: 0;
+  }
+  .burger-icon {
+    display: flex;
+    align-items: center;
+    padding-left: 22.5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+  }
+  
+  body > header .burger-icon img {
+    transform: rotate(90deg);
+  }
+
+
+  header {
+    height: 71px;
+    border-bottom: 0;
+  }
+
+  .logo h1 {
+    line-height: 19px;
+    font-size: 20px;
+  }
+
+  aside {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: var(--header-section);
+    width: 75%;
+    height: 100%;
+  }
+
+  .aside-navbar-wrapper .navbar {
+    display: flex;
+    font-size: 24px;
+    flex-direction: column;
+  }
+
+  .aside-navbar-wrapper .navbar span {
+    padding-bottom: 27px;
+  }
+
+  .aside-navbar-wrapper {
+    display: flex;
+    height: calc(100% - 71px);
+    align-items: center;
+    justify-content: center;
+    font-family: "LatoBold", "Times New Roman", sans-serif;
+    color: var(--white);
+    text-transform: uppercase;
   }
 }
