@@ -298,6 +298,7 @@ header > div {
 }
 
 .slide2 {
+  width: 50%;
   border-bottom: 6px solid lightblue;
 }
 
@@ -342,7 +343,6 @@ header > div {
 
 .slider-section {
   position: relative;
-  width: 1020px;
   margin-top: 95px;
   overflow: hidden;
   background-color: var(--phone-section);
