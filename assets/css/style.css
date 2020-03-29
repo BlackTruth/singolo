@@ -97,6 +97,12 @@ select {
   font-weight: inherit;
 }
 
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 legend {
   color: #000000;
 }
