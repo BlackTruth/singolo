@@ -164,8 +164,9 @@ header {
 }
 
 aside header {
-  width: 75%;
+  position: static;
   padding: 0;
+  border-color: var(--header-section);
 }
 
 h1 {
@@ -994,7 +995,7 @@ main > a:not(.mobile) {
 
   aside .logo-wrapper{
     justify-content: flex-start;
-    padding-left: 71px;
+    padding-left: 29px;
   }
 
   .burger-icon {
@@ -1007,6 +1008,10 @@ main > a:not(.mobile) {
     height: 100%;
     padding: 0 22.5px;
     box-sizing: border-box;
+  }
+
+  aside .burger-icon{
+    position: static;
   }
 
   body > header .burger-icon img {
