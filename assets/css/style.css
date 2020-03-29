@@ -499,13 +499,7 @@ header > div {
   justify-content: center;
   align-items: center;
   margin-top: -3px;
-  margin-bottom: 3px;
   cursor: pointer;
-}
-
-.arrow:first-child > div {
-  margin-right: 2px;
-  margin-left: 2px;
 }
 
 .arrow > div:hover > .circle {
@@ -614,7 +608,7 @@ header > div {
 }
 
 .portfolio-image {
-  border: 5px solid var(--header-section);
+  border: 5px solid transparent;
   box-sizing: border-box;
   background-repeat: no-repeat;
   display: flex;
@@ -942,55 +936,10 @@ main > a {
   position: fixed;
 }
 
-@media only screen and (max-width: 375px) {
-  .section-text {
-    padding: 67px 30px;
-  }
-  .section-text.portfolio {
-    padding: 42px 25px 38px 25px;
-  }
-
-  .portfolio-images {
-    gap: 3px;
-  }
-
-  .portfolio-buttons {
-    letter-spacing: -0.5px;
-  }
-  .portfolio-button {
-    margin-right: 4px;
-  }
-
-  .arrow-wrapper {
-    margin: 0 2.7%;
-    width: calc(100% - 2 * 2.7%);
-  }
-
-  .theme-light,
-  .theme-dark,
-  .theme-lightred,
-  #slide2 {
-    border: 0;
-  }
-
-  .carusel {
-    height: 100%;
-  }
-
-  .alert-message {
-    width: 80%;
-    height: 40%;
-  }
-
-  main > a {
-    top: -70px;
-  }
-}
-
 @media only screen and (max-width: 768px) {
   .arrow-wrapper {
-    margin: 0 3.8%;
-    width: calc(100% - 2 * 3.8%);
+    margin: 0 3.6%;
+    width: calc(100% - 2 * 3.6%);
   }
 
   footer {
@@ -1013,9 +962,11 @@ main > a {
     margin-top: 0;
   }
   .burger-icon {
+    height: 100%;
+    width: fit-content;
     display: flex;
     align-items: center;
-    padding-left: 22.5px;
+    padding: 0 22.5px;
     position: absolute;
     top: 0;
     left: 0;
@@ -1076,5 +1027,51 @@ main > a {
     font-family: "LatoBold", "Times New Roman", sans-serif;
     color: var(--white);
     text-transform: uppercase;
+  }
+}
+
+
+@media only screen and (max-width: 375px) {
+  .section-text {
+    padding: 67px 30px;
+  }
+  .section-text.portfolio {
+    padding: 42px 25px 38px 25px;
+  }
+
+  .portfolio-images {
+    gap: 4px;
+  }
+
+  .portfolio-buttons {
+    letter-spacing: -0.5px;
+  }
+  .portfolio-button {
+    margin-right: 4px;
+  }
+
+  .arrow-wrapper {
+    margin: 0 2.6%;
+    width: calc(100% - 2 * 2.6%);
+  }
+
+  .theme-light,
+  .theme-dark,
+  .theme-lightred,
+  #slide2 {
+    border: 0;
+  }
+
+  .carusel {
+    height: 100%;
+  }
+
+  .alert-message {
+    width: 80%;
+    height: 40%;
+  }
+
+  main > a {
+    top: -70px;
   }
 }
