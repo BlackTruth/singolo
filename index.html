@@ -9,6 +9,9 @@
   </head>
   <body class="wrapper">
     <header>
+      <div id="burgerIcon" class="burger-icon">
+        <img src="assets/images/Burger-menu-icon.png" alt="burger-icon" />
+      </div>
       <div class="logo-wrapper">
         <div class="logo">
           <h1>Singolo</h1>
@@ -25,17 +28,53 @@
         </div>
       </div>
     </header>
+    <aside id="aside" class="mobile-menu">
+      <div>
+        <header>
+          <div id="asideBurgerIcon" class="burger-icon">
+            <img src="assets/images/Burger-menu-icon.png" alt="burger-icon" />
+          </div>
+          <div class="logo-wrapper">
+            <div class="logo">
+              <h1>Singolo</h1>
+            </div>
+          </div>
+        </header>
+        <div class="aside-navbar-wrapper">
+          <div id="asideNavbar" class="navbar">
+            <span class="active"><a href="#home"></a>home</span>
+            <span><a href="#services"></a>services</span>
+            <span><a href="#portfolio"></a>portfolio</span>
+            <span><a href="#about"></a>about</span>
+            <span><a href="#contact"></a>contact</span>
+          </div>
+        </div>
+      </div>
+      <div id="closeAside"></div>
+    </aside>
     <main>
       <a name="home"></a>
       <section id="slider" class="slider-section">
-        <div class="arrow">
-          <div id="arrowLeft">
-            <img src="assets/images/arrow.png" alt="right arrow" />
-            <div class="circle"></div>
+        <div class="arrow-wrapper">
+          <div class="arrow">
+            <div id="arrowLeft">
+              <img src="assets/images/arrow.png" alt="right arrow" />
+              <div class="circle"></div>
+            </div>
+          </div>
+          <div class="arrow">
+            <div id="arrowRight">
+              <div class="circle"></div>
+              <img
+                class="arrow-right"
+                src="assets/images/arrow.png"
+                alt="right arrow"
+              />
+            </div>
           </div>
         </div>
         <div id="carusel" class="carusel">
-          <div id="slide1" class="phones theme-lightred">
+          <div id="slide1" class="slide1 phones theme-lightred">
             <div id="vPhone" class="vertical-phone">
               <img src="assets/images/iPhone-v.png" alt="vertical-phone" />
               <img
@@ -55,24 +94,14 @@
           </div>
           <img
             id="slide2"
-            class="off-elem"
+            class="slide2 off-elem"
             src="assets/images/second-slide.png"
             alt="second-slide"
           />
         </div>
-        <div class="arrow">
-          <div id="arrowRight">
-            <div class="circle"></div>
-            <img
-              class="arrow-right"
-              src="assets/images/arrow.png"
-              alt="right arrow"
-            />
-          </div>
-        </div>
       </section>
       <a name="services"></a>
-      <div class="section-text theme-light our-services">
+      <section class="section-text theme-light our-services">
         <article class="main-text">
           <div class="main-header">Our Services</div>
           <div class="main-body">
@@ -83,84 +112,80 @@
           </div>
         </article>
         <article class="sub-articles">
-          <div class="sub-articles-row">
-            <section class="sub-article">
-              <div class="sub-article-icon">
-                <img src="assets/images/pen.svg" alt="Pen" />
-              </div>
-              <div class="sub-article-text">
-                <h3 class="sub-article-header">Custom Design</h3>
-                <p class="sub-article-body">
-                  Curabitur vestibulum eget mauris quis laoreet. Phasellus in
-                  quam laoreet, viverra lacus ut, ultrices velit.
-                </p>
-              </div>
-            </section>
-            <section class="sub-article">
-              <div class="sub-article-icon">
-                <img src="assets/images/bulb.svg" alt="Bulb" />
-              </div>
-              <div class="sub-article-text">
-                <h3 class="sub-article-header">Inovative Ideas</h3>
-                <p class="sub-article-body">
-                  Quisque luctus, quam eget molestie commodo, lacus purus cursus
-                  purus, nec rutrum tellus dolor id lorem.
-                </p>
-              </div>
-            </section>
-            <section class="sub-article">
-              <div class="sub-article-icon">
-                <img src="assets/images/heart.svg" alt="Herz" />
-              </div>
-              <div class="sub-article-text">
-                <h3 class="sub-article-header">Love Is The Answer</h3>
-                <p class="sub-article-body">
-                  Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet
-                  turpis, et consequat felis. Quisque condimentum.
-                </p>
-              </div>
-            </section>
-          </div>
-          <div class="sub-articles-row">
-            <section class="sub-article">
-              <div class="sub-article-icon">
-                <img src="assets/images/phone.svg" alt="Phone" />
-              </div>
-              <div class="sub-article-text">
-                <h3 class="sub-article-header">Responsive Layout</h3>
-                <p class="sub-article-body">
-                  Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas
-                  blandit nunc ligula. Praesent elit leo.
-                </p>
-              </div>
-            </section>
-            <section class="sub-article">
-              <div class="sub-article-icon">
-                <img src="assets/images/message.svg" alt="Message" />
-              </div>
-              <div class="sub-article-text">
-                <h3 class="sub-article-header">24 / 7 Support</h3>
-                <p class="sub-article-body">
-                  Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi.
-                  Nulla a sem erat. Pellentesque egestas venenatis lorem .
-                </p>
-              </div>
-            </section>
-            <section class="sub-article">
-              <div class="sub-article-icon">
-                <img src="assets/images/star.svg" alt="Star" />
-              </div>
-              <div class="sub-article-text">
-                <h3 class="sub-article-header">Feel Like A Star</h3>
-                <p class="sub-article-body">
-                  Quisque hendrerit purus dapibus, ornare nibh vitae, viverra
-                  nibh. Fusce vitae aliquam tellus.
-                </p>
-              </div>
-            </section>
-          </div>
+          <section class="sub-article">
+            <div class="sub-article-icon">
+              <img src="assets/images/pen.svg" alt="Pen" />
+            </div>
+            <div class="sub-article-text">
+              <h3 class="sub-article-header">Custom Design</h3>
+              <p class="sub-article-body">
+                Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam
+                laoreet, viverra lacus ut, ultrices velit.
+              </p>
+            </div>
+          </section>
+          <section class="sub-article">
+            <div class="sub-article-icon">
+              <img src="assets/images/bulb.svg" alt="Bulb" />
+            </div>
+            <div class="sub-article-text">
+              <h3 class="sub-article-header">Inovative Ideas</h3>
+              <p class="sub-article-body">
+                Quisque luctus, quam eget molestie commodo, lacus purus cursus
+                purus, nec rutrum tellus dolor id lorem.
+              </p>
+            </div>
+          </section>
+          <section class="sub-article">
+            <div class="sub-article-icon">
+              <img src="assets/images/heart.svg" alt="Herz" />
+            </div>
+            <div class="sub-article-text">
+              <h3 class="sub-article-header">Love Is The Answer</h3>
+              <p class="sub-article-body">
+                Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet
+                turpis, et consequat felis. Quisque condimentum.
+              </p>
+            </div>
+          </section>
+          <section class="sub-article">
+            <div class="sub-article-icon">
+              <img src="assets/images/phone.svg" alt="Phone" />
+            </div>
+            <div class="sub-article-text">
+              <h3 class="sub-article-header">Responsive Layout</h3>
+              <p class="sub-article-body">
+                Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas
+                blandit nunc ligula. Praesent elit leo.
+              </p>
+            </div>
+          </section>
+          <section class="sub-article">
+            <div class="sub-article-icon">
+              <img src="assets/images/message.svg" alt="Message" />
+            </div>
+            <div class="sub-article-text">
+              <h3 class="sub-article-header">24 / 7 Support</h3>
+              <p class="sub-article-body">
+                Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi.
+                Nulla a sem erat. Pellentesque egestas venenatis lorem .
+              </p>
+            </div>
+          </section>
+          <section class="sub-article">
+            <div class="sub-article-icon">
+              <img src="assets/images/star.svg" alt="Star" />
+            </div>
+            <div class="sub-article-text">
+              <h3 class="sub-article-header">Feel Like A Star</h3>
+              <p class="sub-article-body">
+                Quisque hendrerit purus dapibus, ornare nibh vitae, viverra
+                nibh. Fusce vitae aliquam tellus.
+              </p>
+            </div>
+          </section>
         </article>
-      </div>
+      </section>
       <a name="portfolio"></a>
       <section class="section-text theme-dark portfolio">
         <article class="main-text portfolio">
@@ -172,24 +197,47 @@
         </article>
         <div id="portfolio-buttons" class="portfolio-buttons">
           <div class="portfolio-button active"><span>All</span></div>
-          <div class="portfolio-button"><span>Web Design</span></div>
-          <div class="portfolio-button"><span>Graphic Design</span></div>
+          <div class="portfolio-button"><span>Web&nbsp;Design</span></div>
+          <div class="portfolio-button"><span>Graphic&nbsp;Design</span></div>
           <div class="portfolio-button"><span>Artwork</span></div>
         </div>
         <div id="portfolioImages" class="portfolio-images">
-          <div class="portfolio-image"></div>
-          <div class="portfolio-image"></div>
-          <div class="portfolio-image"></div>
-          <div class="portfolio-image"></div>
-          <div class="portfolio-image"></div>
-          <div class="portfolio-image"></div>
-          <div class="portfolio-image"></div>
-          <div class="portfolio-image"></div>
-          <div class="portfolio-image"></div>
-          <div class="portfolio-image"></div>
-          <div class="portfolio-image"></div>
-          <div class="portfolio-image"></div>
-          <div class="portfolio-image"></div>
+          <div class="portfolio-image">
+            <img src="assets/images/portfolio-images/pic1.png" alt="p1" />
+          </div>
+          <div class="portfolio-image">
+            <img src="assets/images/portfolio-images/pic2.png" alt="p1" />
+          </div>
+          <div class="portfolio-image">
+            <img src="assets/images/portfolio-images/pic3.png" alt="p1" />
+          </div>
+          <div class="portfolio-image">
+            <img src="assets/images/portfolio-images/pic4.png" alt="p1" />
+          </div>
+          <div class="portfolio-image">
+            <img src="assets/images/portfolio-images/pic5.png" alt="p1" />
+          </div>
+          <div class="portfolio-image">
+            <img src="assets/images/portfolio-images/pic6.png" alt="p1" />
+          </div>
+          <div class="portfolio-image">
+            <img src="assets/images/portfolio-images/pic7.png" alt="p1" />
+          </div>
+          <div class="portfolio-image">
+            <img src="assets/images/portfolio-images/pic8.png" alt="p1" />
+          </div>
+          <div class="portfolio-image">
+            <img src="assets/images/portfolio-images/pic9.png" alt="p1" />
+          </div>
+          <div class="portfolio-image">
+            <img src="assets/images/portfolio-images/pic10.png" alt="p1" />
+          </div>
+          <div class="portfolio-image">
+            <img src="assets/images/portfolio-images/pic11.png" alt="p1" />
+          </div>
+          <div class="portfolio-image">
+            <img src="assets/images/portfolio-images/pic12.png" alt="p1" />
+          </div>
         </div>
       </section>
       <a name="about"></a>
@@ -203,7 +251,7 @@
             tortor mauris condimentum nibh.
           </div>
         </article>
-        <article class="sub-articles">
+        <article class="sub-articles-about-us">
           <div class="sub-articles-grid">
             <div class="about-us-item">
               <img src="assets/images/about-us-images/adam.png" alt="adam" />
@@ -337,7 +385,7 @@
       </section>
     </main>
     <footer>
-      <div>© Copyright 2013 · by PSDchat.com</div>
+      <div>© Copyright 2013</div>
       <div class="icons-social get-a-quote">
         <div></div>
         <div></div>
