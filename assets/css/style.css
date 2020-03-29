@@ -451,7 +451,7 @@ header > div {
 @media only screen and (device-width: 414px) and (device-height: 896px),
  only screen and (max-width: 375px) {
   .slider-section {
-    margin-top: 72px;
+    margin-top: 71px;
   }
   .sub-articles {
     grid-template-rows: repeat(6, 1fr);
@@ -951,7 +951,7 @@ footer .icons-social {
   overflow: hidden;
 }
 
-main > a {
+main > a:not(.mobile) {
   position: relative;
   top: -94px;
 }
@@ -1117,7 +1117,7 @@ main > a {
     height: 40%;
   }
 
-  main > a {
+  main > a:not(.mobile) {
     top: -70px;
   }
 
