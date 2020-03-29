@@ -368,7 +368,7 @@ header > div {
   box-sizing: content-box;
 }
 
-@media only screen and (max-width: 1020px) {
+@media only screen and (max-width: 1019px) {
   .phones .vertical-phone img,
   .phones .horizontal-phone img {
     width: 100%;
@@ -442,15 +442,14 @@ header > div {
   padding: 45px 0 0 0;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1019px) {
   .sub-articles {
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media only screen and (device-width: 414px) and (device-height: 896px),
- only screen and (max-width: 375px) {
+@media only screen and (max-width: 767px) {
   .slider-section {
     margin-top: 71px;
   }
@@ -609,15 +608,14 @@ header > div {
   display: none;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1019px) {
   .portfolio-images {
     grid-template-rows: repeat(4, 1fr);
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-@media only screen and (device-width: 414px) and (device-height: 896px),
- only screen and (max-width: 375px) {
+@media only screen and (max-width: 767px) {
   .portfolio-images {
     grid-template-rows: repeat(4, 1fr);
     grid-template-columns: repeat(2, 1fr);
@@ -654,8 +652,7 @@ header > div {
   gap: 20px;
 }
 
-@media only screen and (device-width: 414px) and (device-height: 896px),
- only screen and (max-width: 375px) {
+@media only screen and (max-width: 767px) {
   .sub-articles-grid {
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: repeat(1, 1fr);
@@ -774,8 +771,7 @@ input[type="button"] {
   cursor: pointer;
 }
 
-@media only screen and (device-width: 414px) and (device-height: 896px),
-only screen and (max-width: 375px) {
+@media only screen and (max-width: 767px) {
   .contact {
     flex-wrap: wrap;
   }
@@ -966,7 +962,7 @@ main > a:not(.mobile) {
   display: none;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1019px) {
   .arrow-wrapper {
     width: calc(100% - 2 * 3.6%);
     margin: 0 3.6%;
@@ -977,7 +973,7 @@ main > a:not(.mobile) {
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 767px) {
   .mobile-menu.active {
     display: flex;
   }
@@ -1066,8 +1062,7 @@ main > a:not(.mobile) {
   }
 }
 
-@media only screen and (device-width: 414px) and (device-height: 896px),
-  only screen and (max-width: 375px) {
+@media only screen and (max-width: 767px) {
   .section-text {
     padding: 40px 30px;
   }
