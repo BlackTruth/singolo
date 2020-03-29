@@ -992,6 +992,11 @@ main > a:not(.mobile) {
     margin-top: 0;
   }
 
+  aside .logo-wrapper{
+    justify-content: flex-start;
+    padding-left: 71px;
+  }
+
   .burger-icon {
     position: absolute;
     top: 0;
