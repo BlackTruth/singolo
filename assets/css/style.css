@@ -439,7 +439,8 @@ header > div {
   }
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (device-width: 414px) and (device-height: 896px),
+ only screen and (max-width: 375px) {
   .sub-articles {
     grid-template-rows: repeat(6, 1fr);
     grid-template-columns: repeat(1, 1fr);
@@ -602,7 +603,8 @@ header > div {
   }
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (device-width: 414px) and (device-height: 896px),
+ only screen and (max-width: 375px) {
   .portfolio-images {
     grid-template-rows: repeat(4, 1fr);
     grid-template-columns: repeat(2, 1fr);
@@ -639,7 +641,8 @@ header > div {
   gap: 20px;
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (device-width: 414px) and (device-height: 896px),
+ only screen and (max-width: 375px) {
   .sub-articles-grid {
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: repeat(1, 1fr);
@@ -758,7 +761,8 @@ input[type="button"] {
   cursor: pointer;
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (device-width: 414px) and (device-height: 896px),
+only screen and (max-width: 375px) {
   .contact {
     flex-wrap: wrap;
   }
@@ -1040,7 +1044,8 @@ main > a {
   }
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (device-width: 414px) and (device-height: 896px),
+  only screen and (max-width: 375px) {
   .section-text {
     padding: 40px 30px;
   }
