@@ -1118,7 +1118,10 @@ main > a:not(.mobile) {
   }
 
   main > a:not(.mobile) {
-    top: -70px;
+    top: -71px;
+  }
+  main > a.mobile {
+    top: 71px;
   }
 
   .contact {
