@@ -35,13 +35,13 @@ window.addEventListener("scroll", function(event) {
     return;
   }
 
-  for(let index=0; index< links.length; index++){
+  for (let index = 0; index < links.length; index++) {
     let prevEl = links[index];
-    let elem = links[index+1];
+    let elem = links[index + 1];
     if (
       window.scrollY >= getTop(prevEl) - (getTop(elem) - getTop(prevEl)) / 5 &&
       window.scrollY <= (getTop(elem) - getTop(prevEl)) / 5 + getTop(prevEl)
-    ){
+    ) {
       setMenuActive(index);
       return;
     }
@@ -49,8 +49,7 @@ window.addEventListener("scroll", function(event) {
 });
 
 function getTop(elem) {
-  if(!elem)
-    return window.pageYOffset + window.innerHeight;
+  if (!elem) return window.pageYOffset + window.innerHeight;
   var box = elem.getBoundingClientRect();
   var body = document.body;
   var docEl = document.documentElement;
@@ -89,14 +88,13 @@ document
       elem.classList.remove("active");
     });
     button.classList.add("active");
-    document
-      .querySelectorAll("#portfolioImages>.portfolio-image")
-      .forEach((elem, index) => {
-        elem.style.order =
-          index > cnt
-            ? 100 + ((index + counter) % cnt)
-            : (index + counter) % cnt;
-      });
+    portfolioImages.querySelectorAll(".portfolio-image").forEach(elem => {
+      if (counter > -1) {
+        elem.remove();
+        portfolioImages.appendChild(elem);
+        counter--;
+      }
+    });
   });
 
 portfolioImages.addEventListener("click", function(event) {
