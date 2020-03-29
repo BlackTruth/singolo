@@ -228,9 +228,3 @@ function showAside() {
 }
 
 closeAside.addEventListener("click", showAside);
-
-window.addEventListener('load', function(){
-  if(window.navigator.userAgent.match(/iPhone/i)){
-    document.querySelectorAll('main > a').forEach( e => e.classList.add('mobile'));
-  }
-});
